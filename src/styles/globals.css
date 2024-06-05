@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* * Colors Used in Tailwind Config, SEO Config */
+    --comp-accent: #265ae2;
+    --comp-bg: #262626;
+    --comp-bg-alt: #1e1e1e;
+    --comp-text: #fefefe;
+
+    --comp-scrollbar-bg: #888;
+    --comp-scrollbar-thumb: #555;
+    --comp-scrollbar-size: 0.75rem;
+
+    --navbar-height: 4rem;
+    --navbar-shrink: 2rem;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    @apply min-h-screen bg-comp-bg font-sans font-normal text-comp-text !antialiased scrollbar;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    -webkit-text-size-adjust: 100%;
+    -ms-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern";
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: var(--comp-scrollbar-size);
+    background: var(--comp-scrollbar-thumb);
+  }
+
+  img {
+    content-visibility: auto;
+  }
+
+  a {
+    @apply hover:cursor-pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply !font-mono;
+  }
+}
+
+@layer components {
+  .page {
+    @apply relative mx-auto min-h-[calc(100vh-var(--navbar-height))] max-w-3xl space-y-4 scroll-smooth bg-comp-bg py-[var(--navbar-height)] font-sans text-comp-text antialiased;
+  }
+
+  .scrollbar {
+    /* track-gray-400/20 thumb-zinc-500; */
+    @apply scrollbar-thin scrollbar-track-comp-scrollbar-bg scrollbar-thumb-comp-scrollbar-thumb;
+  }
+
+  .link {
+    @apply text-white antialiased transition-all hover:text-slate-500 hover:underline;
+  }
+
+  .pixelated {
+    /* https://css-tricks.com/keep-pixelated-images-pixelated-as-they-scale/ */
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: calc(env(safe-area-inset-top));
+  }
+  .safe-bottom {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+  }
+}

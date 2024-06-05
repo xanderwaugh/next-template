@@ -1,0 +1,42 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# local env files
+.env
+.env*.local
+
+# database
+**/*.sqlite
+
+# misc
+.DS_Store
+*.pem
+/analyze/*
+/.vscode/settings.json
+/*.code-workspace
+/db-backups/*
+*.zip
+*.todo
+
+# production
+/public/robots.txt
+/public/sitemap-0.xml
+/public/sitemap.xml
+/public/sw.js
+/public/workbox-*.js 
+
+# next.js
+/.next/
+/out/
+/build/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo

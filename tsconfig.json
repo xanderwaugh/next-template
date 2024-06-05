@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "removeComments": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": ["next", "node", "@types/gtag.js"],
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": { "~/*": ["./src/*"] },
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.js",
+    "**/*.tsx",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.json",
+    "next-env.d.ts",
+    ".eslintrc.cjs",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".next"]
+}
