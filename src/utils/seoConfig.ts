@@ -4,7 +4,7 @@ export const companyTitle = "Company Title";
 export const seoDescription = "Company Description";
 // ! Example URL
 export const siteURL = "https://xanderwaugh.com/";
-// * var(--comp-bg)
+// * background-color
 export const themeColor = "#262626";
 export const companyPhone = "123-456-7890";
 

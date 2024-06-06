@@ -44,7 +44,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
       <Providers session={session}>
         <body
-          className={cn("bg-comp-bg antialiased", sans.variable, mono.variable)}
+          className={cn(
+            "bg-base-100 font-sans font-normal !antialiased scrollbar",
+            sans.variable,
+            mono.variable,
+          )}
         >
           <Header session={session} />
 

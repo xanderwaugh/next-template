@@ -34,8 +34,8 @@ export const authOptions: NextAuthConfig = {
   },
   pages: { error: "/" },
   theme: {
-    brandColor: "", // var(--comp-accent)
-    buttonText: "", // var(--comp-text)
+    brandColor: "",
+    buttonText: "",
     colorScheme: "dark",
     logo: "/android-chrome-192x192.png",
   },

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 
 const genPicsumSeed = () => {
   const seed = Math.floor(Math.random() * 10000);
@@ -18,13 +19,11 @@ const Home: NextPage = () => {
         id="hero"
         className="snap-center flex-col items-center justify-center space-y-4"
       >
-        <h1 className="text-center text-4xl font-semibold text-comp-text">
+        <h1 className="text-wtext text-center text-4xl font-semibold">
           Company Name
         </h1>
 
-        <p className="text-center text-lg text-comp-text">
-          Company Description
-        </p>
+        <p className="text-wtext text-center text-lg">Company Description</p>
 
         <div className="flex flex-1 flex-row items-center justify-center gap-4">
           <Link href="/api/auth/signin/" className="btn btn-primary btn-sm">
@@ -39,7 +38,7 @@ const Home: NextPage = () => {
 
       <div className="flex flex-col items-center justify-center gap-4 px-4">
         <section id="about" className="snap-center">
-          <h2 className="text-center text-4xl font-semibold text-comp-text">
+          <h2 className="text-wtext text-center text-4xl font-semibold">
             About
           </h2>
 
@@ -56,7 +55,7 @@ const Home: NextPage = () => {
         </section>
 
         <section id="about" className="snap-center">
-          <h2 className="text-center text-4xl font-semibold text-comp-text">
+          <h2 className="text-wtext text-center text-4xl font-semibold">
             About
           </h2>
 

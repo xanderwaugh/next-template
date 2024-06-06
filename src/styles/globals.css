@@ -5,14 +5,14 @@
 @layer base {
   :root {
     /* * Colors Used in Tailwind Config, SEO Config */
-    --comp-accent: #265ae2;
+    /* --comp-accent: #265ae2;
     --comp-bg: #262626;
     --comp-bg-alt: #1e1e1e;
-    --comp-text: #fefefe;
+    --comp-text: #fefefe; */
 
-    --comp-scrollbar-bg: #888;
-    --comp-scrollbar-thumb: #555;
-    --comp-scrollbar-size: 0.75rem;
+    --scrollbar-bg: #888;
+    --scrollbar-thumb: #555;
+    --scrollbar-size: 0.75rem;
 
     --navbar-height: 4rem;
     --navbar-shrink: 2rem;
@@ -23,7 +23,7 @@
     box-sizing: border-box;
   }
   body {
-    @apply min-h-screen bg-comp-bg font-sans font-normal text-comp-text !antialiased scrollbar;
+    @apply text-wtext min-h-screen bg-base-100 font-sans font-normal !antialiased scrollbar;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
@@ -32,8 +32,8 @@
     font-feature-settings: "kern";
   }
   ::-webkit-scrollbar-thumb {
-    border-radius: var(--comp-scrollbar-size);
-    background: var(--comp-scrollbar-thumb);
+    border-radius: var(--scrollbar-size);
+    background: var(--scrollbar-thumb);
   }
 
   img {
@@ -55,12 +55,12 @@
 
 @layer components {
   .page {
-    @apply relative mx-auto min-h-[calc(100vh-var(--navbar-height))] max-w-3xl space-y-4 scroll-smooth bg-comp-bg py-[var(--navbar-height)] font-sans text-comp-text antialiased;
+    @apply text-wtext relative mx-auto min-h-[calc(100vh-var(--navbar-height))] max-w-3xl space-y-4 scroll-smooth bg-base-100 py-[var(--navbar-height)] font-sans antialiased;
   }
 
   .scrollbar {
     /* track-gray-400/20 thumb-zinc-500; */
-    @apply scrollbar-thin scrollbar-track-comp-scrollbar-bg scrollbar-thumb-comp-scrollbar-thumb;
+    @apply scrollbar-thin scrollbar-track-scrollbar-bg scrollbar-thumb-scrollbar-thumb;
   }
 
   .link {
